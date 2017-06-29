@@ -20,13 +20,6 @@ app.images.unicornImg = $('<img id="unicorn-img" src="assets/unicorn.png" class=
 app.images.batmanImg = $('<img id="batman-img" src="assets/batman.png" class="invisible" />');
 app.images.doggyImg = $('<img id="doggy-img" src="assets/doggy.png" class="invisible" />');
 app.images.turtleImg = $('<img id="turtle-img" src="assets/turtle.png" class="invisible" />');
-//BACKGROUND IMAGES
-// app.images.jungle1Bg = 'url(assets/jungle1.jpg)';
-// app.images.jungle2Bg = 'url(assets/jungle2.jpg)';
-// app.images.rainbowBg = 'url(assets/rainbow.jpg)';
-// app.images.cityBg = 'url(assets/city.jpg)';
-// app.images.parkBg = 'url(assets/park.jpg)';
-// app.images.oceanBg = 'url(assets/ocean.jpg)';
 //AUDIO
 app.audio.raptorAudio = new Audio('assets/raptor-sound.mp3');
 //METHODS
@@ -284,19 +277,23 @@ app.animateTurtle = function() {
 			});
 		});
 };
-app.buttons.clear = function(){
-	$('#btn__clear').on('click', function(){
-		for(var i in app.images) {
-			console.log(app.images[i]);
-			app.images[i].css({
-				'display' : 'none'
-			});
-		};
-		$('body').css({
-			'background' : 'linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E)'
-		});
-	});
-};
+
+//attempting a custom clear button function
+//not working :-(
+
+// app.buttons.clear = function(){
+// 	$('#btn__clear').on('click', function(){
+// 		for(var i in app.images) {
+// 			console.log(app.images[i]);
+// 			app.images[i].css({
+// 				'display' : 'none'
+// 			});
+// 		};
+// 		$('body').css({
+// 			'background' : 'linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E)'
+// 		});
+// 	});
+// };
 // app.buttons.clear = function() {
 // 	$('#btn__clear').on('click', function(){
 // 		app.images.turtleImg.stop();
@@ -310,7 +307,7 @@ app.init = function() {
 	app.displayBatman();
 	app.displayDoggy();
 	app.displayTurtle();
-	app.buttons.clear();
+	// app.buttons.clear();
 };
 //DOCUMENT READY
 $(function(){
