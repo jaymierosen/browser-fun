@@ -299,6 +299,11 @@ app.animateTurtle = function() {
 // 		app.images.turtleImg.stop();
 // 	});
 // }
+app.buttons.clear = function() {
+	$('#btn__clear').on('click', function(){
+		window.location.reload();
+	});
+}
 //INIT FUNCTION
 app.init = function() {
 	app.displayRaptor();
@@ -307,7 +312,7 @@ app.init = function() {
 	app.displayBatman();
 	app.displayDoggy();
 	app.displayTurtle();
-	// app.buttons.clear();
+	app.buttons.clear();
 };
 //DOCUMENT READY
 $(function(){
