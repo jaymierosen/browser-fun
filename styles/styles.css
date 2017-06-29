@@ -44,6 +44,7 @@ button {
     border-radius:5px;
     box-shadow: 0 9px #FEAC5E;
 	font-family: 'Work Sans', Arial, sans-serif;
+	font-size: 18px;
 }
 button:active {
   box-shadow: 0 5px #95a5a6;
@@ -52,4 +53,5 @@ button:active {
 button#btn__clear {
 	background-color: #383838;
 	color: white;
+	font-size: 14px;
 }

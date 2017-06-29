@@ -29,7 +29,7 @@ app.css.imageCSS = {
 	"right" : "0px"
 };
 app.css.visible = 'visible';
-app.css.bodyCSS = function() {
+app.css.bodyCSS = () => {
 	if(app.images.raptorImg.hasClass(app.css.visible)) {
 		$('body').css({
 			'background' : 'url(assets/jungle1.jpg)',
@@ -73,9 +73,9 @@ app.css.bodyCSS = function() {
 			'z-index' : 1
 		})
 	}
-};
+}
 //RAPTOR
-app.displayRaptor = function(){
+app.displayRaptor = () => {
 	app.buttons.raptorize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.raptorImg);
@@ -85,8 +85,8 @@ app.displayRaptor = function(){
 		app.audio.raptorAudio.play();
 		app.css.bodyCSS();
 	});
-};
-app.animateRaptor = function() {
+}
+app.animateRaptor = () => {
 	app.images.raptorImg.animate({
 		"bottom" : "-20px",
 		"right" : "0px"
@@ -107,9 +107,9 @@ app.animateRaptor = function() {
 				});
 			});
 		});
-};
+}
 //SLOTH
-app.displaySloth = function(){
+app.displaySloth = () => {
 	app.buttons.slotherize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.slothImg);
@@ -118,8 +118,8 @@ app.displaySloth = function(){
 		app.css.bodyCSS();
 	});
 	app.animateSloth();
-};
-app.animateSloth = function() {
+}
+app.animateSloth = () => {
 	app.images.slothImg.animate({
 		"bottom" : "0px",
 		"right" : "0px"
@@ -140,9 +140,9 @@ app.animateSloth = function() {
 				});
 			});
 		});
-};
+}
 //UNICORN
-app.displayUnicorn = function(){
+app.displayUnicorn = () => {
 	app.buttons.unicornerize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.unicornImg);
@@ -151,8 +151,8 @@ app.displayUnicorn = function(){
 		app.css.bodyCSS();
 	});
 	app.animateUnicorn();
-};
-app.animateUnicorn = function() {
+}
+app.animateUnicorn = () => {
 	app.images.unicornImg.animate({
 		"bottom" : "0px",
 		"right" : "0px"
@@ -174,9 +174,9 @@ app.animateUnicorn = function() {
 				});
 			});
 		});
-};
+}
 //BATMAN
-app.displayBatman = function(){
+app.displayBatman = () => {
 	app.buttons.batmanerize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.batmanImg);
@@ -185,8 +185,8 @@ app.displayBatman = function(){
 		app.css.bodyCSS();
 	});
 	app.animateBatman();
-};
-app.animateBatman = function() {
+}
+app.animateBatman = () => {
 	app.images.batmanImg.animate({
 		"bottom" : "0px",
 		"right" : "0px"
@@ -208,9 +208,9 @@ app.animateBatman = function() {
 				});
 			});
 		});
-};
+}
 //DOGGY
-app.displayDoggy = function(){
+app.displayDoggy = () => {
 	app.buttons.doggyerize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.doggyImg);
@@ -219,8 +219,8 @@ app.displayDoggy = function(){
 		app.css.bodyCSS();
 	});
 	app.animateDoggy();
-};
-app.animateDoggy = function() {
+}
+app.animateDoggy = () => {
 	app.images.doggyImg.animate({
 		"bottom" : "0px",
 		"right" : "0px"
@@ -242,9 +242,9 @@ app.animateDoggy = function() {
 				});
 			});
 		});
-};
+}
 //TURTLE
-app.displayTurtle = function(){
+app.displayTurtle = () => {
 	app.buttons.turtlerize.on('click', function(e){
 		e.preventDefault();
 		$('div#surprise').append(app.images.turtleImg);
@@ -253,8 +253,8 @@ app.displayTurtle = function(){
 		app.css.bodyCSS();
 	});
 	app.animateTurtle();
-};
-app.animateTurtle = function() {
+}
+app.animateTurtle = () => {
 	app.images.turtleImg.animate({
 		"bottom" : "0px",
 		"right" : "0px"
@@ -276,8 +276,7 @@ app.animateTurtle = function() {
 				});
 			});
 		});
-};
-
+}
 //attempting a custom clear button function
 //not working :-(
 
@@ -299,13 +298,19 @@ app.animateTurtle = function() {
 // 		app.images.turtleImg.stop();
 // 	});
 // }
-app.buttons.clear = function() {
+// app.buttons.clear = function() {
+// 	$('#btn__clear').on('click', function(){
+// 		window.location.reload();
+// 	});
+// }
+//attempting es6 arrow function below
+app.buttons.clear = () => {
 	$('#btn__clear').on('click', function(){
 		window.location.reload();
 	});
 }
 //INIT FUNCTION
-app.init = function() {
+app.init = () => {
 	app.displayRaptor();
 	app.displaySloth();
 	app.displayUnicorn();
@@ -313,7 +318,7 @@ app.init = function() {
 	app.displayDoggy();
 	app.displayTurtle();
 	app.buttons.clear();
-};
+}
 //DOCUMENT READY
 $(function(){
 	app.init();
