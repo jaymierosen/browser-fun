@@ -5,20 +5,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400" rel="stylesheet">
 	<link rel="stylesheet" href="styles/styles.css">
-	<title>IZE</title>
+	<title>Browser Fun</title>
 </head>
 <body>
-	<button id="raptorize">RAPTORIZE</button>
-	<button id="slotherize">SLOTHERIZE</button>
-	<button id="unicornerize">UNICORNERIZE</button>
-	<button id="nylerize">NYLERIZE</button>
-	<button id="nylerize">BENDYERIZE</button>
-	<div id="surprise">
+	<div class="title">
+		<h1>Browser Fun</h1>
+		<h2>Press any of the buttons below, and see what happens in the browser!</h2>
+		<h3>Press clear to begin a new animation.</h3>
 	</div>
+	<nav>
+		<button id="raptorize">Raptor</button>
+		<button id="slotherize">Sloth</button>
+		<button id="unicornerize">Unicorn</button>
+		<button id="batmanerize">Batman</button>
+		<button id="doggyerize">Dogs</button>
+		<button id="turtlerize">Turtle</button>
+		<div class="clear">
+			<button id="btn__clear">Clear</button>
+		</div>
+
+		<!-- <div>
+			<input type="text" value="" id="">
+		</div> -->
+	</nav>
+	<div id="surprise"></div>
 	<audio id="elRaptorShriek" preload="auto"><source src="assets/raptor-sound.mp3" /><source src="assets/raptor-sound.ogg" /></audio>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.min.css"></script>
 	<script src="scripts/main.js"></script>
 </body>
 </html>
