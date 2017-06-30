@@ -10,14 +10,18 @@ background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+
 	margin: 20px;
 	font-weight: 300;
 }
+a {
+	text-decoration: none;
+}
 .invisible {
 	display: none;
 }
 .visible {
 	display: block;
 }
-div.title {
-	margin: 0 0 0 10px;
+div.title,
+footer {
+	margin: 40px 0 0 10px;
 }
 h1, h2, h3 {
 	color: white;
@@ -54,4 +58,7 @@ button#btn__clear {
 	background-color: #383838;
 	color: white;
 	font-size: 14px;
+}
+footer, a {
+	color: white;
 }
